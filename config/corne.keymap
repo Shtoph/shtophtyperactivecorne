@@ -14,8 +14,8 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | CTRL |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | F? |
-// | Num |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | CTRL |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | F?   |
+// | Num  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | BKSP |
 //                    | LCMD | SPC | SPC |   | SPC | SPC  | ENT |
                         display-name = "Querty";
@@ -28,10 +28,10 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC    |  *  |  =  |  7  |  8  |  9  |   | HOME | UP |  END | TAB | PGU   | &to 3
-// | QUERTY |  -  |  .  |  4  |  5  |  6  |   | LFT | DWN |  RGT |     | PGD   |  @   |
-// | CAPS   |  +  |  0  |  1  |  2  |  3  |   |  [  |  ]  |   (  |  )  | bkslsh| DEL  |
-//                    |     |     |     |   |     |     |      |
+// | ESC    |  *  |  =  |  7  |  8  |  9  |   | HOME | UP |  END | TAB | PGU   | F?    |
+// | QUERTY |  -  |  .  |  4  |  5  |  6  |   | LFT | DWN |  RGT |     | PGD   |  @    |
+// | CAPS   |  +  |  0  |  1  |  2  |  3  |   |  [  |  ]  |   (  |  )  | bkslsh| DEL   |
+//                      | LCMD | SPC | SPC |   | SPC | SPC  | ENT |
                         display-name = "Numbers";
                         bindings = <
    &kp LCTRL    &kp STAR       &kp EQUAL       &kp N7       &kp N8       &kp N9         &kp HOME  &kp UP    &kp END     &kp TAB     &kp PG_UP  &kp BSPC
@@ -46,7 +46,7 @@
 // | CTRL |  F9 | F10 | F11 | F12 |  $  |   |     |     |     |     |     |  QUERTY |
 // | NUM  |  F5 | F6  |  F7 |  F8 |  £  |   |     |     |     |     |     |         |
 // | SHFT |  F1 | F2  |  F3 |  F4 |  &  |   |     |     |     |     |     |  DEL    |
-//                    |     |     |     |   |     |     |     |
+//                    | LCMD | SPC | SPC |   | SPC | SPC  | ENT |
                         display-name = "Function";
                         bindings = <
    &trans     &kp F9 &kp F10 &kp F11 &kp  F12  &kp DLLR     &none &none  &none &none &none &to 1
