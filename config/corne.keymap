@@ -14,44 +14,44 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | CTRL |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | CTRL |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | F? |
+// | Num |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | BKSP |
 //                    | LCMD | SPC | SPC |   | SPC | SPC  | ENT |
                         display-name = "Querty";
                         bindings = <
-   &kp LCTRL  &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL  &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &to 3
+   &to 2 &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &mo LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSPC
                   &mo LGUI &kp SPACE &kp SPACE   &kp SPACE &kp SPACE &kp RET
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC  |  *  |  =  |  7  |  8  |  9  |   | HOME | UP |  END | TAB | PGU   | BKSP |
-// | SHFT |  -  |  .  |  4  |  5  |  6  |   | LFT | DWN |  RGT |     | PGD   |  @   |
-// | CAPS |  +  |  0  |  1  |  2  |  3  |   |  [  |  ]  |   (  |  )  | bkslsh| DEL  |
+// | ESC    |  *  |  =  |  7  |  8  |  9  |   | HOME | UP |  END | TAB | PGU   | &to 3
+// | QUERTY |  -  |  .  |  4  |  5  |  6  |   | LFT | DWN |  RGT |     | PGD   |  @   |
+// | CAPS   |  +  |  0  |  1  |  2  |  3  |   |  [  |  ]  |   (  |  )  | bkslsh| DEL  |
 //                    |     |     |     |   |     |     |      |
                         display-name = "Numbers";
                         bindings = <
-   &kp LCTRL    &kp STAR       &kp EQUAL       &kp N7       &kp N8       &kp N9         &kp HOME  &kp UP    &kp END     &trans      &kp N0  &kp BSPC
-   &bt BT_CLR   &kp MINUS      &kp DOT         &kp N4       &kp N5       &kp N6         &kp LEFT  &kp DOWN  &kp RIGHT   &trans      &trans  &kp AT
-   &kp CAPS    &kp PLUS       &kp N0          &kp N1       &kp N2       &kp N3         &kp LBKT  &kp RBKT  &kp KP_LPAR &kp KP_RPAR &kp BSLH  &kp DEL
+   &kp LCTRL    &kp STAR       &kp EQUAL       &kp N7       &kp N8       &kp N9         &kp HOME  &kp UP    &kp END     &kp TAB     &kp PG_UP  &kp BSPC
+   &to 1        &kp MINUS      &kp DOT         &kp N4       &kp N5       &kp N6         &kp LEFT  &kp DOWN  &kp RIGHT   &trans      &kp PG_DN  &kp AT
+   &kt CAPS     &kp PLUS       &kp N0          &kp N1       &kp N2       &kp N3         &kp LBKT  &kp RBKT  &kp KP_LPAR &kp KP_RPAR &kp BSLH   &kp DEL
                           	       &mo LGUI &kp SPACE &kp SPACE   &kp SPACE &kp SPACE &kp RET
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | CTRL |  F9 | F10 | F11 | F12 |  $  |   |     |     |     |     |     | BKSP |
-// | SHFT |  F5 | F6  |  F7 |  F8 |  £  |   |     |     |     |     |     |      |
-// | SHFT |  F1 | F2  |  F3 |  F4 |  &  |   |     |     |     |     |     |  DEL |
+// | CTRL |  F9 | F10 | F11 | F12 |  $  |   |     |     |     |     |     |  QUERTY |
+// | NUM  |  F5 | F6  |  F7 |  F8 |  £  |   |     |     |     |     |     |         |
+// | SHFT |  F1 | F2  |  F3 |  F4 |  &  |   |     |     |     |     |     |  DEL    |
 //                    |     |     |     |   |     |     |     |
                         display-name = "Function";
                         bindings = <
-   &trans  &kp F9 &kp F10 &kp F11 &kp  F12  &kp DLLR     &trans &trans  &trans &trans &trans &trans
-   &trans  &kp F5 &kp F6  &kp F7  &kp  F8   &kp POUND    &trans &trans  &trans &trans &trans &trans
-   &trans  &kp F1 &kp F2  &kp F3  &kp  F4   &kp AMPS     &trans &trans  &trans &trans &trans &trans
+   &trans     &kp F9 &kp F10 &kp F11 &kp  F12  &kp DLLR     &none &none  &none &none &none &to 1
+   &to 2      &kp F5 &kp F6  &kp F7  &kp  F8   &kp POUND    &none &none  &none &none &none &none
+   &mo LSHFT  &kp F1 &kp F2  &kp F3  &kp  F4   &kp AMPS     &none &none  &none &none &none &none
                          	       &mo LGUI &kp SPACE &kp SPACE   &kp SPACE &kp SPACE &kp RET
                         >;
                 };
