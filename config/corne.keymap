@@ -20,10 +20,10 @@
 //                    | LCMD | SPC | SPC |   | SPC | SPC  | ENT |
                         display-name = "Querty";
                         bindings = <
-   &mo 2          &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &mt LALT BSPC
+   &lt 2     ESC  &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &mt LALT BSPC
    &mt LSHFT CAPS &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &mt LCTRL TAB  &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-                  &kp LGUI &mo 1 &kp SPACE   &kp SPACE &mo 1 &kp RALT
+                  &kp LGUI &mo 1 &lt 3 SPACE   &kp SPACE &mo 1 &kp RALT
                         >;
                 };
                 lower_layer {
@@ -34,10 +34,10 @@
 //                      | LCMD | SPC | SPC |   | SPC | SPC  | ENT |
                         display-name = "Numbers";
                         bindings = <
-   &trans    &kp STAR       &kp EQUAL       &kp N7       &kp N8       &kp N9         &kp HOME  &kp UP    &kp END     &kp INT3  &kp PG_UP  &trans
-   &trans    &kp MINUS      &kp DOT         &kp N4       &kp N5       &kp N6         &kp LEFT  &kp DOWN  &kp RIGHT   &kp AMPS  &kp PG_DN  &kp DQT
-   &trans    &kp PLUS       &kp N0          &kp N1       &kp N2       &kp N3         &kp LPAR  &kp RPAR  &kp MINUS   &kp EXCL  &kp BSLH   &trans
-                          	       &trans &trans &trans   &trans &trans &trans
+   &trans    &kp MINUS      &kp N7       &kp N8       &kp N9       &kp BSPC         &kp INT3  &kp HOME  &kp UP      &kp END   &kp PG_UP  &trans
+   &trans    &kp PLUS       &kp N4       &kp N5       &kp N6       &kp EQUAL        &kp AMPS  &kp LEFT  &kp DOWN    &kp RIGHT &kp PG_DN  &kp DQT
+   &trans    &kp N0         &kp N1       &kp N2       &kp N3       &kp RET          &kp LPAR  &kp RPAR  &kp MINUS   &kp EXCL  &kp BSLH   &trans
+                          	       &kp DOT   &trans &trans   &trans &trans &trans
                         >;
                 };
 
@@ -57,7 +57,18 @@
                 };
 
                 extra_1 {
-                        status = "reserved";
+// -----------------------------------------------------------------------------------------
+// | CTRL |  F9 | F10 | F11 | F12 |  $  |   |     |     |     |     |     |  QUERTY |
+// | NUM  |  F5 | F6  |  F7 |  F8 |  £  |   |     |     |     |     |     |         |
+// | SHFT |  F1 | F2  |  F3 |  F4 |  &  |   |     |     |     |     |     |  DEL    |
+//                    | LCMD | SPC | SPC |   | SPC | SPC  | ENT |
+                        display-name = "Navigate";
+                       bindings = <
+   &trans  &trans &kp HOME  &kp UP    &kp END    &kp PG_UP    &trans   &trans   &trans    &kp LBRC &trans   &trans
+   &trans  &trans &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    &trans   &trans   &trans    &kp RBRC &trans   &trans
+   &trans  &trans &trans    &trans    &trans     &kp TAB      &trans   &trans   &trans    &trans   &kp HASH &trans
+                         	       &trans &trans &trans   &trans &trans &trans
+                        >;
                 };
 
                 extra_2 {
